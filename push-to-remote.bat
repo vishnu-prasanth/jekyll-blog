@@ -25,7 +25,7 @@ rm -rf *
 
 echo.
 echo Copying contents from jekyll-blog\_site to vishnu-prasanth.github.io
-cp -r C:\Files\_Vishnu\www\jekyll-blog\_site C:\Files\_Vishnu\www\vishnu-prasanth.github.io\
+cp -r C:\Files\_Vishnu\www\jekyll-blog\_site\* C:\Files\_Vishnu\www\vishnu-prasanth.github.io\
 
 echo.
 call git add .

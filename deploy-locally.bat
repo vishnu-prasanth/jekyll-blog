@@ -13,12 +13,12 @@ cls
 
 echo.
 echo Deleting _site and its contents...
-rm -rfv
+call rm -rfv _site/*
 
 echo. 
 echo Building _site...
-bundle exec jekyll build
+call bundle exec jekyll build
 
 echo.
 echo Deploying to localhost...
-bundle exec jekyll serve
+call bundle exec jekyll serve --watch

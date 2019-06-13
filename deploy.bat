@@ -13,7 +13,7 @@ cls
 
 echo.
 echo Deleting _site and its contents...
-call rm -rfv _site/*
+call rm -rf _site/*
 
 echo. 
 echo Building _site...

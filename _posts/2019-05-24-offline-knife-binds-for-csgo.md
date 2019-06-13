@@ -146,7 +146,7 @@ echo
 
 PS: The download link at the [top][4] of the article.<br>
 
-[1]:{{ site.url }}/downloads/knife_binds.zip
+[1]:{{ site.url }}/resources/downloads/knife_binds.zip
 [2]:{{ site.url }}/2019/05/24/offline-knife-binds-for-csgo.html#the-basics
 [3]:{{ site.url }}/2019/05/24/offline-knife-binds-for-csgo.html#quick-setup
 [4]:{{ site.url }}/2019/05/24/offline-knife-binds-for-csgo.html#download-link

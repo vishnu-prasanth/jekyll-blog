@@ -4,15 +4,13 @@ title: "Offline knife binds for CSGO"
 tags: counter-strike-global-offensive video-games
 ---
 
-I spend a lot of time offline with bots, aim maps, KZ and surf maps. And I get bored inspecting just the default knives that come with the vanilla game. Since Valve has provided a way to switch knifes, I thought why not bind it and I did! Now I can run around switching knives with just the press of a button. Sweet! <br>
-
-There is also another way to equip all skins gloves etc, but that requires running the game in insecure mode which means no connection to Valve's servers. Anyways I'll try that next, just for fun.<br><br>
+I spend a lot of time offline with bots, practicing aim, surfing etc. And I get bored inspecting just the default knives that come with the vanilla game. Since Valve has provided a way to switch knifes, I thought why not bind it and I did just that! Now I can run around switching knives with just the press of a button. Sweet! <br><br>
  
 <!--more-->
 
-This should also work when playing online with friends, just need to make sure whoever is hosting the server has `sv_cheats` set to 1 and everyone else joining the server should have the knife script.<br>
+There is another way to equip all skins, gloves etc, but that requires running the game in insecure mode which means no connection to Valve's servers. Maybe some other time.<br>
 
-The required files are available for download below.
+This script <i>should</i> also work when playing online with friends, just need to make sure whoever is hosting the server has `sv_cheats` set to 1 and everyone else joining the server should have the knife script.<br>
 
 Download Link --> <a name="download-link">[knife_binds.zip][1]</a><br><br>
 
@@ -21,7 +19,7 @@ Download Link --> <a name="download-link">[knife_binds.zip][1]</a><br><br>
 
 After downloading the files, extract the files to `csgo/cfg`.<br>
 
-Folder structure after extracting should look like this<br>
+The folder structure after extracting should look like this<br>
 ```
 ├── cfg  
 │   ├── knife_binds.cfg  
@@ -33,33 +31,31 @@ Folder structure after extracting should look like this<br>
 │   │   │   └── ...  
 ```
 
-After extracting everything join a casual game with bots and run the script with `exec knife_binds` in the console. Switch the knives by pressing the keypad buttons 1...9. The knives in use now are fav knives and can be changed by editing the config file, its self-explanatory<br>
+Go ahead and startup an offline casual game, use `exec knife_binds` to run the script.<br>
 
-Note: This does not work with DMs since we can't drop weapons. What a shame, nothing we can do about that. Make sure `game_type` & `game_mode` are set to zero<br>
+The knives I added to the script are my favorite knives as of writing and can be changed by editing the knife_binds.cfg file, try it, its self-explanatory<br>
 
-I have only tested it on `classic casual` although it should work on pretty much other modes as well.<br>
+Although I have only tested on classic casual, it should work on pretty much any other gamemodes except for Death match since we can’t drop weapons on that mode. What a shame, nothing I can do about that.<br>
 
-Below I'll explain how everything works.<br><br>
+Read on to see how everything works.<br><br>
 
 ### The Basics (for beginners)<br>
 - - -
-Firstly you'll have to create a file in `"E:\Steam Library\steamapps\common\Counter-Strike Global Offensive\csgo\cfg"`<br>
+Firstly, create a file in your cfg folder, mine is `"E:\Steam Library\steamapps\common\Counter-Strike Global Offensive\csgo\cfg"`<br>
 
-You can name the file anything you want, make sure to put a .cfg at the end. I'll name mine `knife_binds.cfg`. Open up the file and write `echo Hello World!` and save it.<br>
+The filename can be anything you want, just make sure to put a .cfg at the end. I used `knife_binds.cfg`. Open up the file and write `echo Hello World!` and save it.<br>
 
-Now open up CSGO and press `~` to bring up the in-game console<br>
+Now open up CSGO and press `~` to bring up the in-game console. Console is disabled by default, you can enable it from Settings -> Game Settings -> Somewhere Here. <br>
 
-Once the console comes up write `"exec knife_binds"`.<br>
+Once the console comes up write `"exec knife_binds"` and press Enter.<br>
 
-If you've done everything correctly it should print out `Hello World!` on to the console.<br>
-
-(if it doesn't come up you haven't enabled it, you can enable console from the game settings)<br><br>
+If you've done everything correctly it should print out `Hello World!` on to the console.<br><br>
 
 ### Adding knife binds<br>
 - - -
 This is the actual bind!<br>
 
-    `give weapon_knife_m9_bayonet;mp_drop_knife_enable 1;ent_fire weapon_knife addoutput "classname weapon_knifegg"`
+    give weapon_knife_m9_bayonet;mp_drop_knife_enable 1;ent_fire weapon_knife addoutput "classname weapon_knifegg"
 
 The above line is three console commands chained together, that's why its separated by semi colons and enclosed in double quotes.<br>
 
@@ -67,43 +63,48 @@ This can be directly copied & pasted to the console and it will work.<br>
 
 But I'm not going to type this in console everytime I want to switch my knife. That's where binds come in.<br>
 
-So why don't we just go ahead and bind the damn thing? It's not that simple. Binds don't work if there's double quotes in the command that is to be executed.<br>
+So why don't we just go ahead and bind the damn thing? It's not that simple. Binds don't work if there's double quotes in the command.<br>
 
 So if we write a bind for this, it will look like<br>
 
     bind "KP_END" "give weapon_knife_m9_bayonet;mp_drop_knife_enable 1; \
                 ent_fire weapon_knife addoutput "classname weapon_knifegg""
 
-The bind command takes in two parameters <key> <command>, here the key is KP_END and the actual command starts at `give` and ends at `classname weapon_knifegg` which has to be enclosed in double quotes. Hence, the double quote for the actual bind command ends prematurely which will throw an error and as far as I know Valve doesn't provide escape characters in scripts.<br>
+The bind command takes in two parameters <key> <command>, here the key is KP_END. The string `"classname weapon_knifegg"` is enclosed in double quotes. Hence, the double quote for the actual bind command ends prematurely which will throw an error and as far as reddit know Valve doesn't provide escape characters for cofig commands.<br>
 
 What now?<br><br>
 
 ### A simple workaround<br>
 - - -
 
-Since the command cannot be bound directly, I'll have to replace the second parameter of the bind command with a filename and set an alias to `exec` it.<br>
+Since the command cannot be bound directly, it can be replaced by a filename and that file will hold the actual command.<br>
 
-Create a file with the knife bind command and save it as m9bayonet.cfg<br>
+Not the best workaround, but it works.<br>
 
-    `give weapon_knife_m9_bayonet;mp_drop_knife_enable 1;ent_fire weapon_knife addoutput "classname weapon_knifegg`
+Create a file with the knife bind command and save it as m9bayonet.cfg (I'm using bayonet as an example)<br>
 
-Now create an alias for it inside the file you created earlier (`knife_binds.cfg`)<br>
+    give weapon_knife_m9_bayonet;mp_drop_knife_enable 1;ent_fire weapon_knife addoutput "classname weapon_knifegg"
 
-    `alias m9bayonet "exec m9bayonet"`
+Now create an alias for it inside the file that was created earlier (`knife_binds.cfg`)<br>
+
+    alias m9bayonet "exec m9bayonet"
 
 In the next line bind it to a key with the following command
     `bind "KP_END" "use weapon_knife; drop; m9bayonet"`
 
 The `knife_binds.cfg` file should look like this<br>
 
-    `alias m9bayonet "exec m9bayonet"`
-    `bind "KP_END" "use weapon_knife; drop; m9bayonet"`
+    alias m9bayonet "exec m9bayonet"
+    bind "KP_END" "use weapon_knife; drop; m9bayonet"
 
-Now go in-game start an offline game_mode other than DM, and run `exec knife_binds` from the console. And that should work.<br>
+
+Where m9bayonet is the alias to load the command inside the file `m9bayonet.cfg`<br>
+
+Now go in-game start an offline game_mode other than DM, and run `exec knife_binds` from the console. And it should work.<br><br>
 
 ### Full script
 
-This is how the finished script looks like<br>
+This is what the finished script looks like<br>
 
 ```
 sv_cheats 1
@@ -111,7 +112,8 @@ mp_items_prohibited 0
 
 // KNIFE HELP
 echo ** List of Available Knifes **
-echo bayonet, flip, gut, karambit, m9bayonet, tactical, butterfly, falchion, bowie, ursus, jack, stiletto, widomaker
+echo bayonet, flip, gut, karambit, m9bayonet, tactical, butterfly, falchion, bowie, \
+		ursus, jack, stiletto, widomaker
 
 // KNIFE BINDS | OFFLINE
 alias bayonet "exec custom/knives/bayonet"

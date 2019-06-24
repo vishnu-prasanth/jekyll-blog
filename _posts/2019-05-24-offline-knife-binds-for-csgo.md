@@ -31,6 +31,8 @@ The folder structure after extracting should look like this<br>
 │   │   │   └── ...  
 ```
 
+<img class="image image--xs" src="{{ site.url }}/resources/screenshots/offline-knife-binds-for-csgo_01.png" width="100%"><br>
+
 Go ahead and startup an offline casual game, use `exec knife_binds` to run the script.<br>
 
 The knives I added to the script are my favorite knives as of writing and can be changed by editing the knife_binds.cfg file, try it, its self-explanatory<br>

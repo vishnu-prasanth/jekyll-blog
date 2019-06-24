@@ -18,7 +18,7 @@
 
   {%- if include.article.tags[0] -%}
     <ul class="left-col menu">
-
+      <b>Tags</b>:&nbsp;
       {%- assign _tag_path = _paths_archive | append: '?tag=' -%}
       {%- include snippets/prepend-baseurl.html path=_tag_path -%}
 

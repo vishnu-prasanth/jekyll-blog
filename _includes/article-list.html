@@ -38,12 +38,10 @@
                 {%- endif -%}
               </div>
             {%- endif -%}
-            <p><a href="{{ _href }}">{{ _locale_readmore }}</a></p>
           </div>
           {%- include article-info.html article=_article show_pageview=true -%}
         </div>
       </article>
-
 
     {%- elsif include.type == 'brief' -%}
       {%- assign _tags = '' -%}

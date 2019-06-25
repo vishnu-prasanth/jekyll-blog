@@ -39,99 +39,84 @@ The scripts are not well written considering I was just starting out, anyway I'm
 
 #### Perk Binds
 ```
-	;--------------------------------------------
-	;PERK AUTOMATION ( BOTH SURVIVOR AND ZOMBIE )
-	;--------------------------------------------
-
-	#IfWinActive, GTA:SA:MP		;This script only works on SA-MP
-
-	;Extra Meds
-	*$/::
-	SendInput t/setperk 1 2 {Enter}
-	return
-
-	;Extra Fuel
-	*$,::
-	SendInput t/setperk 1 3 {Enter}
-	return
-
-	;Extra Oil
-	*$.::
-	SendInput t/setperk 1 4 {Enter}
-	return
-
-	;FlashBang & Hard Bite
-	*$x::
-	SendInput t/setperk 1 5 {Enter}
-	SendInput t/setperk 2 2 {Enter}
-	return
-
-	;Digger
-	*$7::
-	SendInput t/setperk 2 3 {Enter}
-	return
-
-	;Less Bite Damage & Screamer
-	*$r::
-	SendInput t/setperk 1 6 {enter}
-	SendInput t/setperk 2 9 {Enter}
-	return
-
-	;Dead Sense
-	*$6::
-	SendInput t/setperk 2 6 {enter}
-	return
-
-	;Burst Run
-	*$q::
-	SendInput t/setperk 1 7 {enter}
-	SendInput t/setperk 2 10 {enter}
-	return
-
-	;Vomiter
-	*$8::
-	SendInput t/setperk 2 8 {enter}
-	return
-
-	;More Stamina & Thick Skin
-	*$3::
-	SendInput t/setperk 1 9 {Enter}
-	SendInput t/setperk 2 14 {Enter}
-	return
-
-	;Zombie Bait & Refreshing Bite
-	*$z::
-	SendInput t/setperk 1 10 {enter}
-	SendInput t/setperk 2 4 {enter}
-	return
-
-	;Stinger Bite
-	*$4::
-	SendInput t/setperk 2 11 {Enter}
-	return
-
-	;Surefoot & Stomp
-	*$v::
-	SendInput t/setperk 1 13 {enter}
-	SendInput t/setperk 2 13 {enter}
-	return
-
-	;Rocket Boots & Big Jumper
-	*$e::
-	SendInput t/setperk 1 15 {Enter}
-	SendInput t/setperk 2 12 {Enter}
-	return
-
-	;God Dig
-	*$5::
-	SendInput t/setperk 2 15 {Enter}
-	return
-
-	;PERK 16 SURVIVOR
-	*$b::
-	SendInput t/setperk 1 16 {Enter}
-	SendInput t/setperk 2 16 {Enter}
-	return
+ ;Script for Automating Tasks in Los Santos Apocalypse
+ ;Author: Vishnu Prasanth ( Infinite-Gaming ) 
+ ;--------------------------------------------
+ ;PERK AUTOMATION ( BOTH SURVIVOR AND ZOMBIE )
+ ;-------------------------------------------- 
+ #IfWinActive, GTA:SA:MP		;This script only works on SA-MP 
+ ;Extra Meds
+ *$/::
+ SendInput t/setperk 1 2 {Enter}
+ return 
+ ;Extra Fuel
+ *$,::
+ SendInput t/setperk 1 3 {Enter}
+ return 
+ ;Extra Oil
+ *$.::
+ SendInput t/setperk 1 4 {Enter}
+ return 
+ ;FlashBang & Hard Bite
+ *$x::
+ SendInput t/setperk 1 5 {Enter}
+ SendInput t/setperk 2 2 {Enter}
+ return 
+ ;Digger
+ *$7::
+ SendInput t/setperk 2 3 {Enter}
+ return 
+ ;Less Bite Damage & Screamer
+ *$r::
+ SendInput t/setperk 1 6 {enter}
+ SendInput t/setperk 2 9 {Enter}
+ return 
+ ;Dead Sense
+ *$6::
+ SendInput t/setperk 2 6 {enter}
+ return 
+ ;Burst Run
+ *$q::
+ SendInput t/setperk 1 7 {enter}
+ SendInput t/setperk 2 10 {enter}
+ return 
+ ;Vomiter
+ *$8::
+ SendInput t/setperk 2 8 {enter}
+ return 
+ ;More Stamina & Thick Skin
+ *$3::
+ SendInput t/setperk 1 9 {Enter}
+ SendInput t/setperk 2 14 {Enter}
+ return 
+ ;Zombie Bait & Refreshing Bite
+ *$z::
+ SendInput t/setperk 1 10 {enter}
+ SendInput t/setperk 2 4 {enter}
+ return 
+ ;Stinger Bite
+ *$4::
+ SendInput t/setperk 2 11 {Enter}
+ return 
+ ;Surefoot & Stomp
+ *$v::
+ SendInput t/setperk 1 13 {enter}
+ SendInput t/setperk 2 13 {enter}
+ return 
+ ;Rocket Boots & Big Jumper
+ *$e::
+ SendInput t/setperk 1 15 {Enter}
+ SendInput t/setperk 2 12 {Enter}
+ return 
+ ;God Dig
+ *$5::
+ SendInput t/setperk 2 15 {Enter}
+ return 
+ ;PERK 16 SURVIVOR
+ *$b::
+ SendInput t/setperk 1 16 {Enter}
+ SendInput t/setperk 2 16 {Enter}
+ return
 ```
 
 <br>
@@ -139,112 +124,99 @@ The scripts are not well written considering I was just starting out, anyway I'm
 #### Chat Binds
 
 ```
-	;Script for Automating Tasks in Los Santos Apocalypse
-	;Author: Vishnu Prasanth ( Infinite-Gaming )
-
-	;This section is used for suspending the autohotkey script while using chat.
-	;Pause AHK
-	$t::
-	Suspend On
-	SendInput t
-	Hotkey, Enter, On
-	Hotkey, Escape, On
-	Hotkey, t, Off
-	return
-
-	NumpadEnter::
-	Enter::
-	Suspend Permit
-	Suspend Off
-	SendInput {Enter}
-	Hotkey, t, On
-	Hotkey, Enter, Off
-	Hotkey, Escape, Off
-	return
-
-	Escape::
-	Suspend Permit
-	Suspend Off
-	SendInput {Escape}
-	Hotkey, t, On
-	Hotkey, Enter, Off
-	Hotkey, Escape, Off
-	return
-
-	;-----------
-	;ONLINE CHAT
-	;-----------
-
-	;Premium Chat
-	 ------------
-	*^1::
-	Suspend On
-	SendInput t{!}pmc{Space}
-	Hotkey, Enter, On
-	Hotkey, Escape, On
-	Hotkey, t, Off
-	return
-
-	;Clan Chat
-	 ---------
-	*^2::
-	Suspend On
-	SendInput t@{Space}
-	Hotkey, Enter, On
-	Hotkey, Escape, On
-	Hotkey, t, Off
-	return
-
-	;Private Message
-	 ---------------
-	*$^-::
-	Suspend On
-	SendInput t/pm{Space}
-	Hotkey, Enter, On
-	Hotkey, Escape, On
-	Hotkey, t, Off
-	return
-
-	;Team Private Message
-	 --------------------
-	*$^=::
-	Suspend On
-	SendInput t/tpm{Space}
-	Hotkey, Enter, On
-	Hotkey, Escape, On
-	Hotkey, t, Off
-	return
-
-	;----------------
-	;Report to admins
-	;----------------
-
-	*$^p::
-	SendInput t/r [SS]Vizkrig Hive Bug! {Enter}
-	return
-
-	*$^o::
-	SendInput t/r [SS]Vizkrig Bugged! {Enter}
-	return
+ ;Script for Automating Tasks in Los Santos Apocalypse
+ ;Author: Vishnu Prasanth ( Infinite-Gaming ) 
+ ;This section is used for suspending the autohotkey script while using chat.
+ ;Pause AHK
+ $t::
+ Suspend On
+ SendInput t
+ Hotkey, Enter, On
+ Hotkey, Escape, On
+ Hotkey, t, Off
+ return 
+ NumpadEnter::
+ Enter::
+ Suspend Permit
+ Suspend Off
+ SendInput {Enter}
+ Hotkey, t, On
+ Hotkey, Enter, Off
+ Hotkey, Escape, Off
+ return 
+ Escape::
+ Suspend Permit
+ Suspend Off
+ SendInput {Escape}
+ Hotkey, t, On
+ Hotkey, Enter, Off
+ Hotkey, Escape, Off
+ return 
+ ;-----------
+ ;ONLINE CHAT
+ ;----------- 
+ ;Premium Chat
+ ------------
+ *^1::
+ Suspend On
+ SendInput t{!}pmc{Space}
+ Hotkey, Enter, On
+ Hotkey, Escape, On
+ Hotkey, t, Off
+ return 
+ ;Clan Chat
+ ---------
+ *^2::
+ Suspend On
+ SendInput t@{Space}
+ Hotkey, Enter, On
+ Hotkey, Escape, On
+ Hotkey, t, Off
+ return 
+ ;Private Message
+ ---------------
+ *$^-::
+ Suspend On
+ SendInput t/pm{Space}
+ Hotkey, Enter, On
+ Hotkey, Escape, On
+ Hotkey, t, Off
+ return 
+ ;Team Private Message
+ --------------------
+ *$^=::
+ Suspend On
+ SendInput t/tpm{Space}
+ Hotkey, Enter, On
+ Hotkey, Escape, On
+ Hotkey, t, Off
+ return 
+ ;----------------
+ ;Report to admins
+ ;---------------- 
+ *$^p::
+ SendInput t/r [SS]Vizkrig Hive Bug! {Enter}
+ return 
+ *$^o::
+ SendInput t/r [SS]Vizkrig Bugged! {Enter}
+ return
 ```
 
 <br>
 
 #### Miscellaneous 
 ```
-	;--------------
-	;Other Commands
-	;--------------
-
-	;SURVIVOR WEAPONS
-	^g::
-	SendInput t/weapons {Enter}
-	return
-
-	;ZOMBIE HIDE
-	^h::
-	SendInput t/hide {Enter}
-	return
+ ;--------------
+ ;Other Commands
+ ;-------------- 
+ ;SURVIVOR WEAPONS
+ ^g::
+ SendInput t/weapons {Enter}
+ return 
+ ;ZOMBIE HIDE
+ ^h::
+ SendInput t/hide {Enter}
+ return
 ```
 
 Cheers.

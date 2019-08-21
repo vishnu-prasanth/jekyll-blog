@@ -4,11 +4,11 @@ title: "Offline knife binds for CSGO"
 tags: counter-strike-global-offensive video-games
 ---
 
-I spend a lot of time offline with bots, practicing aim, surfing etc. And I get bored inspecting just the default knives that come with the vanilla game. Since Valve has provided a way to switch knifes, I thought why not bind it and I did just that! Now I can run around switching knives with just the press of a button. Sweet! <br><br>
+I spend a lot of time offline with bots, practicing aim, surfing etc., sometimes its boring to just inspect the default knives that come with the vanilla game. Since Valve has provided a way to switch knifes, I thought why not bind it and I wrote a script to just do that! Now I can run around switching knives with just the press of a button. Sweet! <br><br>
  
 <!--more-->
 
-There is another way to equip all skins, gloves etc, but that requires running the game in insecure mode which means no connection to Valve's servers. Maybe some other time.<br>
+There is another way to equip all skins, gloves etc, but that requires running the game in `insecure` mode which means no connection to Valve's servers. Maybe some other time.<br>
 
 This script <i>should</i> also work when playing online with friends, just need to make sure whoever is hosting the server has `sv_cheats` set to 1 and everyone else joining the server should have the knife script.<br>
 
@@ -19,7 +19,7 @@ Download Link --> <a name="download-link">[knife_binds.zip][1]</a><br><br>
 
 After downloading the files, extract the files to `csgo/cfg`.<br>
 
-The folder structure after extracting should look like this<br>
+The folder structure after extraction should look like this<br>
 ```
 ├── cfg  
 │   ├── knife_binds.cfg  
@@ -102,7 +102,7 @@ The `knife_binds.cfg` file should look like this<br>
 
 Where m9bayonet is the alias to load the command inside the file `m9bayonet.cfg`<br>
 
-Now go in-game start an offline game_mode other than DM, and run `exec knife_binds` from the console. And it should work.<br><br>
+Once you've finished binding, start an offline game with bots other than DM, run `exec knife_binds` from the console. And it should work.<br><br>
 
 ### Full script
 
@@ -148,7 +148,7 @@ echo +++ knife_binds.cfg executed successfully +++
 echo
 ```
 
-PS: The download link at the [top][4] of the article.<br>
+PS: The download link is at the [top][4] of the article.<br>
 
 [1]:{{ site.url }}/resources/downloads/knife_binds.zip
 [2]:{{ site.url }}/2019/05/24/offline-knife-binds-for-csgo.html#the-basics

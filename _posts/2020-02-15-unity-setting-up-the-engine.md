@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Week #1 of Learning Unity - The Basics"
+title: "Unity - Setting up the Engine"
 tags: unity game-development
 ---
 
@@ -18,45 +18,45 @@ Anyhow ended up starting the update, hoping it would fix the issue. The update h
 
 This time I took the high road and removed the drivers through Device Manager and rebooted in safe mode to try the installation again. This time it worked like a charm.  
 
-<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-learning-unity-week-1/geforce-experience-after-installation.png
+<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-unity-setting-up-the-engine/geforce-experience-after-installation.png
 " width="100%">
 
 ### Unity Installation
 
 Afterwards I proceeded with Unity Engine installation, ended up installing 2018 and 2019 builds as some of the built-in tutorials would only run on the 2018 build. Had to do a bit of research to figure this out though, it isn't documented anywhere.  
 
-<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-learning-unity-week-1/unity-icons.png
+<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-unity-setting-up-the-engine/unity-icons.png
 " width="25%">
 
 ### Getting Started
 
 The 4 basic tutorials in the 2018 editor was easy enough that I flew past them in an hour.  
 
-<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-learning-unity-week-1/unity-2018-inbuilt-tutorials.png
+<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-unity-setting-up-the-engine/unity-2018-inbuilt-tutorials.png
 " width="100%">
 
 After completing the basic tutorial I moved onto the `Tutorial Projects` tab, here I saw a bunch of nice tutorials but as you can see I was trying to download projects for 2019 build using 2018 editor. Unity didn't complain but it didn't do anything either.  
 
-<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-learning-unity-week-1/unity-tutorial-projects.jpg
+<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-unity-setting-up-the-engine/unity-tutorial-projects.jpg
 " width="100%">
 
 One of them did download and when I tried to open it, threw a large stacktrace.  Took me another minute to notice what I was doing wrong. So the next option was to try opening these tutorials in Unity build 2019.  
 
-<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-learning-unity-week-1/booting-up-unity-2019.png
+<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-unity-setting-up-the-engine/booting-up-unity-2019.png
 " width="100%">
 <font size="2px">Unity 2019 booting up...</font><br>
 
-<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-learning-unity-week-1/unity-2019-hub.png
+<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-unity-setting-up-the-engine/unity-2019-hub.png
 " width="100%">
 
 ### The Baby Steps
 
 Some of the projects in the Unity hub doesn't have any option to open evenafter successfull download. Finally I ended up doing the Micro Kart racing game project in 2018 editor.  
 
-<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-learning-unity-week-1/karting-micro-game-playtest-01.png
+<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-unity-setting-up-the-engine/karting-micro-game-playtest-01.png
 " width="100%">
 
-<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-learning-unity-week-1/karting-micro-game-playtest-02.png
+<img class="image image--xs" src="{{ site.url }}/resources/screenshots/2020-02-15-unity-setting-up-the-engine/karting-micro-game-playtest-02.png
 " width="100%">
 
 That's it for this week. Until next time.

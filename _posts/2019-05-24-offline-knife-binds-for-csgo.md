@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Offline knife binds for CSGO"
+title: "Offline knife binds for CSGO (New knives added!)"
 tags: counter-strike-global-offensive video-games
 ---
 
@@ -12,7 +12,7 @@ There is another way to equip all skins, gloves etc, but that requires running t
 
 This script <i>should</i> also work when playing online with friends, just need to make sure whoever is hosting the server has `sv_cheats` set to 1 and everyone else joining the server should have the knife script.<br>
 
-Download Link --> <a name="download-link">[knife_binds.zip][1]</a><br><br>
+Download Link --> <a name="download-link">[knife_binds_v2.zip][1]</a><br><br>
 
 ### Quick Setup<br>
 - - -
@@ -112,12 +112,11 @@ This is what the finished script looks like<br>
 sv_cheats 1
 mp_items_prohibited 0
 
-// KNIFE HELP
+// Print list of knives
 echo ** List of Available Knifes **
-echo bayonet, flip, gut, karambit, m9bayonet, tactical, butterfly, falchion, bowie, \
-		ursus, jack, stiletto, widomaker
+echo bayonet, flip, gut, karambit, m9bayonet, tactical, butterfly, falchion, bowie, shadow, ursus, jack, stiletto, talon, survival, classic,  nomad, paracord, skeleton, spectral, spanner, hammer, axe, fists, gold
 
-// KNIFE BINDS | OFFLINE
+// Create aliases from file
 alias bayonet "exec custom/knives/bayonet"
 alias m9bayonet "exec custom/knives/m9bayonet"
 alias flip "exec custom/knives/flip"
@@ -127,31 +126,43 @@ alias tactical "exec custom/knives/tactical"
 alias butterfly "exec custom/knives/butterfly"
 alias falchion "exec custom/knives/falchion"
 alias bowie "exec custom/knives/bowie"
+alias shadow "exec custom/knives/shadow"
 alias ursus "exec custom/knives/ursus"
 alias jack "exec custom/knives/jack"
 alias stiletto "exec custom/knives/stiletto"
-alias widowmaker "exec custom/knives/widowmaker"
+alias talon "exec custom/knives/talon"
+alias survival "exec custom/knives/canis"
+alias classic "exec custom/knives/classic"
+alias nomad "exec custom/knives/nomad"
+alias paracord "exec custom/knives/paracord"
+alias skeleton "exec custom/knives/skeleton"
+alias spectral "exec custom/knives/spectral"
+alias spanner "exec custom/knives/spanner"
+alias hammer "exec custom/knives/hammer"
+alias axe "exec custom/knives/axe"
+alias fists "exec custom/knives/fists"
+alias gold "exec custom/knives/gold"
 
+// Binds
 bind "KP_END" "use weapon_knife; drop; m9bayonet"
 bind "KP_DOWNARROW" "use weapon_knife; drop; butterfly"
-bind "KP_PGDN" "use weapon_knife; drop; falchion"
-bind "KP_LEFTARROW" "use weapon_knife; drop; gut"
-bind "KP_5" "use weapon_knife; drop; karambit"
-bind "KP_RIGHTARROW" "use weapon_knife; drop; flip"
-bind "KP_HOME" "use weapon_knife; drop; ursus"
-bind "KP_UPARROW" "use weapon_knife; drop; stiletto"
-bind "KP_PGUP" "use weapon_knife; drop; tactical"
+bind "KP_PGDN" "use weapon_knife; drop; skeleton"
+bind "KP_LEFTARROW" "use weapon_knife; drop; karambit"
+bind "KP_5" "use weapon_knife; drop; gut"
+bind "KP_RIGHTARROW" "use weapon_knife; drop; nomad"
+bind "KP_HOME" "use weapon_knife; drop; shadow"
+bind "KP_UPARROW" "use weapon_knife; drop; jack"
+bind "KP_PGUP" "use weapon_knife; drop; spectral"
 
 // Debug
-echo
-echo +++ knife_binds.cfg executed successfully +++
+echo 
+echo +++ knife_binds.cfg executed successfully +++ 
 echo
 ```
 
 PS: The download link is at the [top][4] of the article.<br>
 
-[1]:{{ site.url }}/resources/downloads/knife_binds.zip
+[1]:{{ site.url }}/resources/downloads/knife_binds_v2.zip
 [2]:{{ site.url }}/2019/05/24/offline-knife-binds-for-csgo.html#the-basics
 [3]:{{ site.url }}/2019/05/24/offline-knife-binds-for-csgo.html#quick-setup
 [4]:{{ site.url }}/2019/05/24/offline-knife-binds-for-csgo.html#download-link
-
